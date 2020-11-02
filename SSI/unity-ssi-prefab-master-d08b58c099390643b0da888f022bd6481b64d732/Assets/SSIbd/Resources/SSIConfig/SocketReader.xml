@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<readers xmlns="http://tempuri.org/Reader.xsd">
+  <channelgroup name="bvp-reader" id="1" ip="127.0.0.1">
+    <channel name="gsr" port="50110" dim="1" bytes="4" type="Float" rate="27"></channel>
+    <channel name="bvp" port="50100" dim="1" bytes="4" type="Float" rate="27"></channel>
+    <channel name="bvp_hr" port="50101" dim="1" bytes="4" type="Float" rate="27"></channel>
+  </channelgroup>
+</readers>

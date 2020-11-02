@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b2bd53d433d4eda47921678a0ff89e2e
+timeCreated: 1525020708
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - slider: {instanceID: 0}
+  - bombPrefabBig: {fileID: 1228634223566592, guid: a6e35732f709e3b4a94ce95f41e851ae,
+      type: 2}
+  - bombPrefabSmall: {fileID: 1815914210802010, guid: fdcb9ab919176c14c91b3bd1866ad3a3,
+      type: 2}
+  - bombPrefabDoubleExplosion: {fileID: 1068556596143540, guid: 1d1e8e59ce794bc4c9579b42440a6ec2,
+      type: 2}
+  - bombExplodeOnContact: {fileID: 1764897422344422, guid: f65e26a7f9f5f6f41a5942987e76447a,
+      type: 2}
+  - playerTransform: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

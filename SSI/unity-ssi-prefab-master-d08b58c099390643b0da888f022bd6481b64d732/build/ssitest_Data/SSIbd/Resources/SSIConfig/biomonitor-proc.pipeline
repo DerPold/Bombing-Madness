@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<pipeline>
+	<register>
+		<load name="signal" />
+		<load name="graphic" />
+		<load name="ioput" />
+		<load name="biosig" />
+		<load name="ssiframe"/>
+		<load name="ssievent"/>
+	</register>
+
+
+
+	<!-- lowpass -->
+	<transformer create="Butfilt" zero="true" type="0" low="0.1" order="3">
+		<input pin="bvp" frame="0.1s"/>
+		<output pin="bvp_low"/>
+	</transformer>
+
+	<!-- pulse -->
+	<transformer create="Pulse" minr="50" maxr="140" delta="0.2">
+		<input pin="bvp_low" frame="0.5s"/>
+		<output pin="bvp_hr"/>
+	</transformer>
+
+	<!-- Socket sender -->
+	<consumer create="SocketWriter" host="" port="50100" type="0" id="bvp" osc="true">
+		<input pin="bvp" frame="0.1s" />
+	</consumer>
+	<consumer create="SocketWriter" host="" port="50101" type="0" id="bvp-hr" osc="true">
+		<input pin="bvp_hr" frame="1" />
+	</consumer>
+
+
+
+
+
+
+
+	<!-- Artifact Removal -->
+	<!--transformer create="range="1.0" thres="4" winsize="0.2" replacement="1.5">
+		<input pin="gsr" frame="3.0s" delta="0.5s"/>
+		<output pin="gsr_art"/>
+	</transformer>-->
+
+	<!-- Preprocessing -->
+	<transformer create="Butfilt" zero="true" type="0" low="0.01" order="3">
+		<input pin="gsr" frame="0.5s"/>
+		<output pin="gsr_low"/>
+	</transformer>
+
+	<!-- GSR Events -->
+	<consumer create="GSREventSender" epeakname="gsr-peak" eslopename="gsr-slope" edropname="gsr-drop" tuple="true" peaknstd="0.5" peakmind="1.5" peakmaxd="3.0" slopenstd="2.0" slopemind="0.5" slopemaxd="3.0">
+		<input pin="gsr_low" frame="4.0s"/>
+	</consumer>
+
+	<!-- Arousal Estimation -->
+	<transformer create="GSRArousalEstimation">
+		<input pin="gsr_low" frame="0.5s"/>
+		<output pin="gsr_arousal"/>
+	</transformer>
+
+	<!-- Feature -->
+	<consumer create="FunctionalsEventSender" sname="gsr" ename="gsr-af" names="mean">
+		<input pin="gsr_arousal" frame="0.5s" />
+	</consumer>
+
+	<!-- Socket sender -->
+	<consumer create="SocketWriter" host="" port="50110" type="0" id="gsr" osc="true">
+		<input pin="gsr" frame="0.1s" />
+	</consumer>
+	<consumer create="SocketWriter" host="" port="50111" type="0" id="gsr-pre">
+		<input pin="gsr_low" frame="3.0s" />
+	</consumer>
+	<consumer create="SocketWriter" host="" port="50112" type="0" id="gsr-arousal">
+		<input pin="gsr_arousal" frame="3.0s" />
+	</consumer>
+	<object create="SocketEventWriter" host="" port="50113" type="0">
+		<listen address="gsr-af@gsr" />
+	</object>
+	<object create="SocketEventWriter" host="" port="50114" type="0">
+		<listen address="gsr-peak,gsr-slope,gsr-drop@gsr" />
+	</object>
+
+	<!-- Unity Events -->
+
+	!-- read events from network-->
+	<object create="SocketEventReader" size="8196"  osc="true"  type="0" port="58780" host="" address = "uselessstring@unityEvents"/>
+
+
+	<!-- write events to file -->
+	<object create="FileEventWriter" path="record/events4.events">
+		<listen address="@unityEvents" />
+	</object>
+
+
+	<!-- Visualization -->
+
+	<object create="EventMonitor:monitor" title="UNITY">
+		<listen address="@unityEvents" span="5000" />
+	</object>
+
+
+	<object create="EventMonitor:monitor" title="GSR">
+		<listen address="@gsr" span="20000" />
+	</object>
+
+	<consumer create="SignalPainter:plot" title="BLOOD VOLUME PULSE" size="6">
+		<input pin="bvp" frame="0.1s" delta="0"/>
+	</consumer>
+	<consumer create="SignalPainter:plot" title="BLOOD VOLUME PULSE LOWPASSED" size="6">
+		<input pin="bvp_low" frame="0.1s" delta="0"/>
+	</consumer>
+	<consumer create="SignalPainter:plot" title="HEARTRATE" size="60">
+		<input pin="bvp_hr" frame="1.0s" delta="0"/>
+	</consumer>
+
+	<consumer create="SignalPainter:plot" title="GALVANIC SKIN RESPONSE" size="6">
+		<input pin="gsr" frame="0.1s" delta="0"/>
+	</consumer>
+	<consumer create="SignalPainter:plot" title="ARTIFACT REMOVAL" size="150">
+		<input pin="gsr_low" frame="0.1s" delta="0"/>
+	</consumer>
+	<consumer create="SignalPainter:plot" title="AROUSAL LEVEL" size="150">
+		<input pin="gsr_arousal" frame="0.1s" delta="0"/>
+	</consumer>
+
+
+	<object create="Decorator" icon="true" title="Pipeline">
+		<area pos="0,0,400,600">console</area>
+		<area pos="400,0,400,600">plot*</area>
+		<area pos="800,0,400,600" nh="1">monitor*</area>
+	</object>
+
+
+</pipeline>

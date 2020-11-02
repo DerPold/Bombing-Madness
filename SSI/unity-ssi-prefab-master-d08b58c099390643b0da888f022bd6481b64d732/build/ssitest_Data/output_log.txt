@@ -1,0 +1,54 @@
+Initialize engine version: 5.4.2f2 (b7e030c65c9b)
+GfxDevice: creating device client; threaded=1
+Initialize engine version: 5.4.2f2 (b7e030c65c9b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 950M (ID=0x139a)
+    VenDoi:r ecVtD3AD
+:  VRAM:     4065 MBt3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 950M (ID=0x139a)
+    Vendor:   NVIDIA
+    VRAM:     4065 MB
+Begin MonoManager ReloadAssembly
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Pold\Desktop\unity-ssi-prefab-master-d08b58la0tfor06as3bsda888f: C:\bds6rs\Po64d\D32\build\ssty-ssi-prefabanmaged\Uni08yEngc0ne.dll (3b0isa8me8fs02e is harmless)
+\buildLssiteng C:\Users\Pold\DeityEnpgine.dlls (this bmessage-d08 ha8rmless)64
+3b0Loading C:\Use1b6\Pdo32d\Desktop\unestt_Data\Mefabged\UnityEngine.dll into b0dit888Child d6omain64
+d732\build\ssitest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Pold\Desktop\unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Pold\Desktop\unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\ManagPdlatforblm-CSharp.bly:l into Unityo Childktopmaunit
+y-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\Assembly-CSharp.dll (this messagePis harmlessse
+mbly: ading C:\Usold\PDesktop\unity-nity-ssi-prefab-mast08r-d0c099390643b0da8b0da0888f0221b64d732\build\ssitd\stsiDatst\Maata\edanagedyEngine.UI\Assem(this -eSharpssage is hanity Chil
+d Domoan
+ding C:\Users\Pold\Desktop\unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\UnityEngPle.foIm assembly: C:\Users\Pold\Desk
+top\unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\lUtfotym ngssne.UI.dll (this message is harmless)si-prLoading C:\Users\Pold\De0643bp\danityf022bdp6481b64d732\bui8b5\sc099390643b0dMa888fe022bd6481b64d.Net2\oruiind\.dsite(tt_Data\Managed\UnityEngin.UI.Loading C:\Uts Child Domain
+top\unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\UnityEnginP.Natform insg.dll int:\Usners\Pold\ Domktop\
+unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\sPlatform aa\Managed\UnityEng\ine.Networking.dty-ssi-prefabsage it harmleb5s)09939064adinda8C8f\U22ers\Po1b6\Dd7sktop\unity-ssi-prefab-mastged\R08b58c099390643b0da888f022bd64armb64d732
+\build\ssite:\Userts\Pold\DesktotyEngitne.Nsi-preking.dll int-d0Unit8c099i390643bi0d
+a888f022bd6481b64d732\build\ssitest_Data\Managed\Rug.Osc.dll into UnitP Cahifld Dassembly
+: C:\Users\Pold\Desktop\unity-ssi-prefab-master-d08b58c099390643b0da8Plat22brm assembly:3C:2Us\build\d\Desktop\unity-ssid\Rug.Ob-madlte (this m8cssa93e06is3b0drm88ess022
+bd64Loading32\:\uild\ssitedst_Datap\Managed\S-SIEventmSender.0dll (th939 m64ssb0ge 88s ha22bd6481b
+64dLoadingldC:ssitess\PDold\Manaktedp\unity-ssi-printo Unity Child D8cmain90643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\SSIEvesntbleyder.:\ll instPold\Dey kthip\d Ditmaissi
+-prefab-master-d08b58c099390643b0da888f022bd6481b64d7P2\build\ssitest_y:a C:\Usaged\SSIEveestSender.nill (this mefssa-me iter-arm8es58)
+099390oadingda88\U02ersd\481bd\4des32topuiuni\tsitest-pData\b-anaster-d08b58ser.d39l (th3bs da888f022bd6481b64m73s2\e ui ha\sleste
+stLoading Ca\gsersSPSlI\Eevktot\Seiny-ssi-prefab-masity Child Domain
+-d08b58c099390643b0da888f022bd6481b64d732\build\sPitest_Data\Manaly: C:\Users\r.dll insktop\unity-ssi-pomaefn
+b-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\SSIParser.dll (this message is harmless)
+Loading C:\Users\Pold\Desktop\unity-ssi-prefab-master-d08b58c099390643b0da888f022bd6481b64d732\build\ssitest_Data\Managed\SSIParser.dll into Unity Child Domain
+- Completed reload, in  0.057 seconds
+- Completed reload, in  0.059 seconds
+PPlatform asemblysemblysersC:\Users\Pokld\Desktop\unitye-ssi-preerfd08-mb58c09938b58900643b04da88a8888f22bd6d6481b64d73\build\sdsitest_Dataaa\Mana\edan\Seystem.CmoCrre.dll (thlsl (this mes hasrmleis ha
+rmless)
+PlatfoPm assfmbly: C:s\mbely\Pol:\D sC:\Usunety-\Piold\Desktaop\unity-s8si-prefa4b-m0da8a8ft022bd6481b64d732\builda8\88f0e22_Datb\6Managed\System.dlsl (this mea\Mansgsage itsm.dll (thi)
+s message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Initializing input.
+<RI> Input initialize<R
+> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.901923 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: ec -> priority: 1 

@@ -1,0 +1,2 @@
+[__________] # !ERROR! # unable to bind udp socket
+location: ..\..\source\ioput\socket\ip\win32\UdpSocket.cpp (220)

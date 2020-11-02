@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<events ssi-v="2">
+	<time ms="0" local="00/00/00 00:00:00:0" system="00/00/00 00:00:00:0"/>
+    <event sender="unityEvents1" event="sender" from="124209" dur="0" prob="1.000000" type="STRING" state="COMPLETED" glue="0">moretext</event>
+    <event sender="unityEvents1" event="sender" from="124209" dur="0" prob="1.000000" type="MAP" state="COMPLETED" glue="0">
+        <tuple string="param" value="42.419998" />
+    </event>
+</events>

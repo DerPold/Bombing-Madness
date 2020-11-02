@@ -1,0 +1,221 @@
+  ssi.CamSelectionDialog.resources - Embedded, ContainedInManifestFile, 
+  ssi.DialogTemplate.resources - Embedded, ContainedInManifestFile, 
+  ssi.PinAndMediaSelectionDialog.resources - Embedded, ContainedInManifestFile, 
+  ssi.SimpleSelectionDialog.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly ssidialogd, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class DialogLib.DialogTemplate: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 _selectedOption : Public
+    System.String _helpText : Public
+    System.Collections.Generic.Dictionary`2[System.String,System.String] _returnString : Public
+    System.Collections.Generic.Dictionary`2[System.String,System.Double] _returnDouble : Public
+    System.Collections.Generic.Dictionary`2[System.String,System.Single] _returnFloat : Public
+    System.Collections.Generic.Dictionary`2[System.String,System.Int32] _returnInt : Public
+  Methods:
+    AddItem(String, Int32, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddItem(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RemoveItem(String, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RemoveItems(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class DialogLib.CamSelectionDialog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DialogLib.DialogTemplate
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddItem(String, Int32, String): PrivateScope, Public, Virtual, HideBySig
+    AddItem(String, String): PrivateScope, Public, Virtual, HideBySig
+    RemoveItem(String, Int32): PrivateScope, Public, Virtual, HideBySig
+    RemoveItems(String): PrivateScope, Public, Virtual, HideBySig
+Class DialogLib.SimpleSelectionDialog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DialogLib.DialogTemplate
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddItem(String, Int32, String): PrivateScope, Public, Virtual, HideBySig
+    AddItem(String, String): PrivateScope, Public, Virtual, HideBySig
+    RemoveItem(String, Int32): PrivateScope, Public, Virtual, HideBySig
+    RemoveItems(String): PrivateScope, Public, Virtual, HideBySig
+Class DialogLib.MediaTypeInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 dwDVVAuxCtl 'get set' : 
+    UInt32 dwDVVAuxSrc 'get set' : 
+    UInt32 dwDVAAuxCtl1 'get set' : 
+    UInt32 dwDVAAuxSrc1 'get set' : 
+    UInt32 dwDVAAuxCtl 'get set' : 
+    UInt32 dwDVAAuxSrc 'get set' : 
+    UInt32 biClrImportant 'get set' : 
+    UInt32 biClrUsed 'get set' : 
+    Int32 biYPelsPerMeter 'get set' : 
+    Int32 biXPelsPerMeter 'get set' : 
+    UInt32 biSizeImage 'get set' : 
+    UInt32 biCompression 'get set' : 
+    UInt16 biBitCount 'get set' : 
+    UInt16 biPlanes 'get set' : 
+    Int32 biHeight 'get set' : 
+    Int32 biWidth 'get set' : 
+    UInt32 biSize 'get set' : 
+    Int64 AvgTimePerFrame 'get set' : 
+    UInt32 dwBitErrorRate 'get set' : 
+    UInt32 dwBitRate 'get set' : 
+    System.Drawing.Rectangle rcTarget 'get set' : 
+    System.Drawing.Rectangle rcSource 'get set' : 
+    Int32 MaxBitsPerSecond 'get set' : 
+    Int32 MinBitsPerSecond 'get set' : 
+    Int64 MaxFrameInterval 'get set' : 
+    Int64 MinFrameInterval 'get set' : 
+    Int32 ShrinkTapsY 'get set' : 
+    Int32 ShrinkTapsX 'get set' : 
+    Int32 StretchTapsY 'get set' : 
+    Int32 StretchTapsX 'get set' : 
+    Int32 OutputGranularityY 'get set' : 
+    Int32 OutputGranularityX 'get set' : 
+    System.Drawing.Size MaxOutputSize 'get set' : 
+    System.Drawing.Size MinOutputSize 'get set' : 
+    Int32 CropAlignY 'get set' : 
+    Int32 CropAlignX 'get set' : 
+    Int32 CropGranularityY 'get set' : 
+    Int32 CropGranularityX 'get set' : 
+    System.Drawing.Size MaxCroppingSize 'get set' : 
+    System.Drawing.Size MinCroppingSize 'get set' : 
+    System.Drawing.Size InputSize 'get set' : 
+    System.String guid 'get set' : 
+    UInt32 cbFormat 'get set' : 
+    System.String formattype 'get set' : 
+    UInt32 lSampleSize 'get set' : 
+    Boolean bTemporalCompression 'get set' : 
+    Boolean bFixedSizeSamples 'get set' : 
+    System.String subtype 'get set' : 
+    System.String majortype 'get set' : 
+  Methods:
+    get_biClrImportant(): PrivateScope, Public, HideBySig, SpecialName
+    set_biClrImportant(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwDVAAuxSrc(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwDVAAuxSrc(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwDVAAuxCtl(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwDVAAuxCtl(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwDVAAuxSrc1(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwDVAAuxSrc1(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwDVAAuxCtl1(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwDVAAuxCtl1(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwDVVAuxSrc(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwDVVAuxSrc(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwDVVAuxCtl(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwDVVAuxCtl(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_majortype(): PrivateScope, Public, HideBySig, SpecialName
+    set_majortype(String): PrivateScope, Public, HideBySig, SpecialName
+    get_subtype(): PrivateScope, Public, HideBySig, SpecialName
+    set_subtype(String): PrivateScope, Public, HideBySig, SpecialName
+    get_bFixedSizeSamples(): PrivateScope, Public, HideBySig, SpecialName
+    set_bFixedSizeSamples(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_bTemporalCompression(): PrivateScope, Public, HideBySig, SpecialName
+    set_bTemporalCompression(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_lSampleSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_lSampleSize(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_formattype(): PrivateScope, Public, HideBySig, SpecialName
+    set_formattype(String): PrivateScope, Public, HideBySig, SpecialName
+    get_cbFormat(): PrivateScope, Public, HideBySig, SpecialName
+    set_cbFormat(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_guid(): PrivateScope, Public, HideBySig, SpecialName
+    set_guid(String): PrivateScope, Public, HideBySig, SpecialName
+    get_InputSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_InputSize(Size): PrivateScope, Public, HideBySig, SpecialName
+    get_MinCroppingSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinCroppingSize(Size): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxCroppingSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxCroppingSize(Size): PrivateScope, Public, HideBySig, SpecialName
+    get_CropGranularityX(): PrivateScope, Public, HideBySig, SpecialName
+    set_CropGranularityX(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CropGranularityY(): PrivateScope, Public, HideBySig, SpecialName
+    set_CropGranularityY(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CropAlignX(): PrivateScope, Public, HideBySig, SpecialName
+    set_CropAlignX(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CropAlignY(): PrivateScope, Public, HideBySig, SpecialName
+    set_CropAlignY(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MinOutputSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinOutputSize(Size): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxOutputSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxOutputSize(Size): PrivateScope, Public, HideBySig, SpecialName
+    get_OutputGranularityX(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutputGranularityX(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_OutputGranularityY(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutputGranularityY(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_StretchTapsX(): PrivateScope, Public, HideBySig, SpecialName
+    set_StretchTapsX(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_StretchTapsY(): PrivateScope, Public, HideBySig, SpecialName
+    set_StretchTapsY(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ShrinkTapsX(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShrinkTapsX(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ShrinkTapsY(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShrinkTapsY(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MinFrameInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinFrameInterval(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxFrameInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxFrameInterval(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MinBitsPerSecond(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinBitsPerSecond(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxBitsPerSecond(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxBitsPerSecond(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_rcSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_rcSource(Rectangle): PrivateScope, Public, HideBySig, SpecialName
+    get_rcTarget(): PrivateScope, Public, HideBySig, SpecialName
+    set_rcTarget(Rectangle): PrivateScope, Public, HideBySig, SpecialName
+    get_dwBitRate(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwBitRate(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_dwBitErrorRate(): PrivateScope, Public, HideBySig, SpecialName
+    set_dwBitErrorRate(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_AvgTimePerFrame(): PrivateScope, Public, HideBySig, SpecialName
+    set_AvgTimePerFrame(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_biSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_biSize(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_biWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_biWidth(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_biHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_biHeight(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_biPlanes(): PrivateScope, Public, HideBySig, SpecialName
+    set_biPlanes(UInt16): PrivateScope, Public, HideBySig, SpecialName
+    get_biBitCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_biBitCount(UInt16): PrivateScope, Public, HideBySig, SpecialName
+    get_biCompression(): PrivateScope, Public, HideBySig, SpecialName
+    set_biCompression(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_biSizeImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_biSizeImage(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_biXPelsPerMeter(): PrivateScope, Public, HideBySig, SpecialName
+    set_biXPelsPerMeter(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_biYPelsPerMeter(): PrivateScope, Public, HideBySig, SpecialName
+    set_biYPelsPerMeter(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_biClrUsed(): PrivateScope, Public, HideBySig, SpecialName
+    set_biClrUsed(UInt32): PrivateScope, Public, HideBySig, SpecialName
+Class DialogLib.GUIDStringToName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean _isInit : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.String] StringMap : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.String] GUIDMap : Public, Static
+  Methods:
+    InitGUIDMap(): PrivateScope, Public, Static, HideBySig
+Class DialogLib.PinAndMediaSelectionDialog: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DialogLib.DialogTemplate
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[System.Collections.Generic.List`1[DialogLib.MediaTypeInfo]] _mediaTypeInfo : Public
+  Methods:
+    AddItem(String, Int32, String): PrivateScope, Public, Virtual, HideBySig
+    AddItem(String, String): PrivateScope, Public, Virtual, HideBySig
+    RemoveItem(String, Int32): PrivateScope, Public, Virtual, HideBySig
+    RemoveItems(String): PrivateScope, Public, Virtual, HideBySig
+Struct DialogLib.DialogManager: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType

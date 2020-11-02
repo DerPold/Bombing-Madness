@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<pipeline>
+	<register>
+		<load name="signal" />
+		<load name="graphic" />
+		<load name="ioput" />
+		<load name="biosig" />
+		<load name="ssimouse"/>
+		<load name="ssiframe"/>
+		<load name="ssievent"/>
+	</register>
+
+	<sensor create="Mouse" mask="1">
+	<output channel="cursor" pin="pos">
+			<transformer create="Selector" indices="0"/>
+	</output>
+	</sensor>
+
+	<!-- bvp -->
+	<consumer create="SocketWriter" host="127.0.0.1" port="50100">
+		<input pin="pos" frame="0.1s" />
+	</consumer>
+
+	<!-- pulse -->
+	<transformer create="Butfilt" zero="true" type="0" low="0.1" order="3">
+		<input pin="pos" frame="0.1s"/>
+		<output pin="bvp_low"/>
+	</transformer>
+
+	<transformer create="Pulse" minr="50" maxr="140" delta="0.2">
+		<input pin="bvp_low" frame="0.5s"/>
+		<output pin="bvp_hr"/>
+	</transformer>
+
+	<!-- Socket sender -->
+	<consumer create="SocketWriter" host="" port="50101" type="0" id="bvp-hr" osc="true">
+		<input pin="bvp_hr" frame="1" />
+	</consumer>
+
+	<!-- gsr -->
+	<consumer create="SocketWriter" host="127.0.0.1" port="50110">
+		<input pin="pos" frame="0.1s" />
+	</consumer>
+	<!-- Unity Events -->
+
+	<!-- read events from network-->
+	<object create="SocketEventReader" size="8196"  osc="true"  type="0" port="58780" host="" address = "uselessstring@unityEvents"/>
+
+
+	<!-- write events to file -->
+	<object create="FileEventWriter" path="record/eventsFake.events">
+		<listen address="@unityEvents" />
+	</object>
+
+
+	<!-- Visualization -->
+
+	<object create="EventMonitor:monitor" title="UNITY">
+		<listen address="@unityEvents" span="5000" />
+	</object>
+
+
+	<consumer create="SignalPainter:plot" title="BLOOD VOLUME PULSE" size="6">
+		<input pin="pos" frame="0.1s" delta="0"/>
+	</consumer>
+	<consumer create="SignalPainter:plot" title="BLOOD VOLUME PULSE LOWPASSED" size="6">
+		<input pin="bvp_low" frame="0.1s" delta="0"/>
+	</consumer>
+	<consumer create="SignalPainter:plot" title="HEARTRATE" size="60">
+		<input pin="bvp_hr" frame="1.0s" delta="0"/>
+	</consumer>
+
+
+	<object create="Decorator" icon="true" title="Pipeline">
+		<area pos="0,0,400,600">console</area>
+		<area pos="400,0,400,600">plot*</area>
+		<area pos="800,0,400,600" nh="1">monitor*</area>
+	</object>
+
+</pipeline>
